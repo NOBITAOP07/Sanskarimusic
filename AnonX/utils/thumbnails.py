@@ -58,7 +58,7 @@ async def gen_thumb(videoid, user_id):
                     await f.close()
 
         try:
-            wxyz = await app.get_profile_photos(user_id)
+            wxyz = await app.get_profile_photos(chat_id)
             wxy = await app.download_media(wxyz[0]['file_id'], file_name=f'{user_id}.jpg')
         except:
             hehe = await app.get_profile_photos(app.id)
@@ -134,7 +134,7 @@ async def gen_thumb(videoid, user_id):
     except Exception:
         return YOUTUBE_IMG_URL
 
-async def gen_qthumb(videoid, user_id):
+async def gen_qthumb(videoid, chat_id):
     if os.path.isfile(f"cache/{videoid}.png"):
         return f"cache/{videoid}.png"
 
