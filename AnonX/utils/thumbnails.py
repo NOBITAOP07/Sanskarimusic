@@ -59,7 +59,7 @@ async def gen_thumb(videoid, user_id, chat_id):
 
         try:
             wxyz = await app.get_profile_photos(chat_id)
-            wxy = await app.download_media(wxyz[0]['file_id'], file_name=f'{user_id}.jpg')
+            wxy = await app.download_media(wxyz[0]['file_id'], file_name=f'{chat_id}.jpg')
         except:
             hehe = await app.get_profile_photos(app.id)
             wxy = await app.download_media(hehe[0]['file_id'], file_name=f'{app.id}.jpg')
@@ -175,7 +175,7 @@ async def gen_qthumb(videoid, chat_id):
         image1 = changeImageSize(1280, 720, youtube)
         sex = changeImageSize(1080, 420, youtube)
         image2 = image1.convert("RGBA")
-        background = image2.filter(filter=ImageFilter.BoxBlur(30))
+        background = image2.filter(filter=ImageFilter.BoxBlur(20))
         enhancer = ImageEnhance.Brightness(background)
         background = enhancer.enhance(0.6)
         logo = ImageOps.expand(sex, border=15, fill="white")
