@@ -87,7 +87,7 @@ async def gen_thumb(videoid, user_id):
         m = np.array(j)
         n = np.dstack((l, m))
         o = Image.fromarray(n)
-        p = o.resize((100, 100))
+        p = o.resize((180, 180))
 
         youtube = Image.open(f"cache/thumb{videoid}.png")
         image1 = changeImageSize(1280, 720, youtube)  
