@@ -72,6 +72,22 @@ async def gen_thumb(videoid, user_id):
         e = np.dstack((c, d))
         f = Image.fromarray(e)
         x = f.resize((180, 180))
+        
+        try:
+            xyz = await app.get_profile_photos(app.id)
+            xy = await app.download_media(xyz[0]['file_id'], file_name=f'{app.id}.jpg')
+        except:
+            he = await app.get_profile_photos(app.id)
+            xy = await app.download_media(he[0]['file_id'], file_name=f'{app.id}.jpg')
+        yz = Image.open(xy)
+        j = Image.new('L', [640, 640], 0)
+        k = ImageDraw.Draw(j)
+        k.pieslice([(0, 0), (640,640)], 0, 360, fill = 255, outline = "white")
+        l = np.array(yz)
+        m = np.array(j)
+        n = np.dstack((l, m))
+        o = Image.fromarray(n)
+        p = o.resize((100, 100))
 
         youtube = Image.open(f"cache/thumb{videoid}.png")
         image1 = changeImageSize(1280, 720, youtube)  
@@ -79,7 +95,7 @@ async def gen_thumb(videoid, user_id):
         background = image2.filter(filter=ImageFilter.BoxBlur(20))
         enhancer = ImageEnhance.Brightness(background)
         background = enhancer.enhance(0.8)        
-        background.paste(x, (55, 260), mask=x)
+        background.paste(p, (55, 260), mask=p)
         background.paste(x, (1065, 255), mask=x)
 
         draw = ImageDraw.Draw(background)
