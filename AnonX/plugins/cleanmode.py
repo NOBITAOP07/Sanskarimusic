@@ -9,7 +9,7 @@ import config
 from config import adminlist, chatstats, clean, userstats
 from strings import get_command
 from AnonX import app, userbot
-from AnonX.misc import SUDOERS
+from config import OWNER_ID
 from AnonX.utils.database import (get_active_chats,
                                        get_authuser_names, get_client,
                                        get_particular_top,
@@ -57,7 +57,7 @@ async def clean_mode(client, update, users, chats):
     await set_queries(1)
 
 
-@app.on_message(filters.command(BROADCAST_COMMAND) & SUDOERS)
+@app.on_message(filters.command(BROADCAST_COMMAND) & OWNER_ID))
 @language
 async def braodcast_message(client, message, _):
     global IS_BROADCASTING
