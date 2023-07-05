@@ -191,7 +191,7 @@ async def gen_qthumb(videoid, user_id):
         image1 = changeImageSize(1280, 720, youtube)
         sex = changeImageSize(1080, 420, youtube)
         image2 = image1.convert("RGBA")
-        background = image2.filter(filter=ImageFilter.BoxBlur(30))
+        background = image2.filter(filter=ImageFilter.BoxBlur(10))
         enhancer = ImageEnhance.Brightness(background)
         background = enhancer.enhance(0.6)
         logo = ImageOps.expand(sex, border=15, fill="white")
