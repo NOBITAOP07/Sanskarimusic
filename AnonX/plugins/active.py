@@ -8,11 +8,11 @@ from AnonX.utils.database.memorydatabase import (
     get_active_chats, get_active_video_chats)
 
 # Commands
-ACTIVEVC_COMMAND = get_command("ACTIVEVC_COMMAND")
-ACTIVEVIDEO_COMMAND = get_command("ACTIVEVIDEO_COMMAND")
+ACTIVEVC_COMMAND = get_command("AC_COMMAND")
+ACTIVEVIDEO_COMMAND = get_command("AV_COMMAND")
 
 
-@app.on_message(filters.command(ACTIVEVC_COMMAND) & SUDOERS)
+@app.on_message(filters.command(AC_COMMAND) & SUDOERS)
 async def activevc(_, message: Message):
     mystic = await message.reply_text(
         "ɢᴇᴛᴛɪɴɢ ᴀᴄᴛɪᴠᴇ ᴠᴏɪᴄᴇᴄʜᴀᴛs ʟɪsᴛ..."
@@ -40,7 +40,7 @@ async def activevc(_, message: Message):
         )
 
 
-@app.on_message(filters.command(ACTIVEVIDEO_COMMAND) & SUDOERS)
+@app.on_message(filters.command(AV_COMMAND) & SUDOERS)
 async def activevi_(_, message: Message):
     mystic = await message.reply_text(
         "ɢᴇᴛᴛɪɴɢ ᴀᴄᴛɪᴠᴇ ᴠɪᴅᴇᴏᴄʜᴀᴛs ʟɪsᴛ..."
