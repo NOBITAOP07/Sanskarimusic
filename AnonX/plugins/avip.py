@@ -71,7 +71,7 @@ async def littleac(_, message: Message):
     ac_audio = str(len(await get_active_chats()))
     ac_video = str(len(await get_active_video_chats()))
     UP, CPU, RAM, DISK = await bot_sys_stats()
-    await message.reply_text(f"𝗕𝗼𝘁 𝗔𝗰𝘁𝗶𝘃𝗲 𝗖𝗵𝗮𝘁𝘀 𝗜𝗻𝗳𝗼 • 🔊\n•━━━━━━━━━━━━━━━━━━•\n🎧 **ᴀᴜᴅɪᴏ** 🎧 » {ac_audio} Active\n•───────•\n🎥 **ᴠɪᴅᴇᴏ** 🎥 » {ac_video} Active\n•──────•\n\n🧭 **CPU** => {CPU}\n📟 **RAM** => {RAM}\n💽 **DISK** => {DISK}\n•───────•", quote=True)
+    await message.reply_text(f"𝐁ᴏᴛ 𝐀ᴄᴛɪᴠᴇ 𝐂ʜᴀᴛs 𝐈ɴғᴏ • 🔊\n•━━━━━━━━━━━━━━━━━━•\n🎧 **𝐀ᴜᴅɪᴏ** 🎧 » {ac_audio} Active\n•───────•\n🎥 **𝐕ɪᴅᴇᴏ** 🎥 » {ac_video} Active\n•──────•\n\n🧭 **CPU** => {CPU}\n📟 **RAM** => {RAM}\n💽 **DISK** => {DISK}\n•───────•", quote=True)
 
 
 #Logs, Temps Etc Cleaner Without Restarting Bot
