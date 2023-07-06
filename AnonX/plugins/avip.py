@@ -82,10 +82,10 @@ async def clearLogs(_, message: Message):
     try:
         os.system(A)
         os.system(B)
-        os.system('rm Ashlogs.txt')
+        os.system('rm logs.txt')
         for i in range(11):
             number = str(i)
-            os.system(f'rm Ashlogs.txt.{number}')
+            os.system(f'rm logs.txt.{number}')
     except:
         await message.reply_text(f"**Failed To Delete Some Files !!**\nPlease Read\n{traceback.format_exc()}", quote=True)
     await message.reply_text(f"**Successfully Deleted Below Folders & Files**:\n -Downloads\n -Cache\n -Logs\n\n **PLUGIN MADE BY** - Ayush", quote=True)
