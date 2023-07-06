@@ -10,7 +10,7 @@ import config
 from config import adminlist, chatstats, clean, userstats, OWNER_ID
 from strings import get_command
 from AnonX import app, userbot
-from config import SUDOERS
+from config import OWNER_ID
 from AnonX.utils.database import (get_active_chats,
                                        get_authuser_names, get_client,
                                        get_particular_top,
