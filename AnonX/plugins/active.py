@@ -1,11 +1,6 @@
-import os
-import sys
-
-import pyrogram
 from pyrogram import filters
 from pyrogram.types import Message
 
-from config import OWNER_ID
 from strings import get_command
 from AnonX import app
 from AnonX.misc import SUDOERS
@@ -15,9 +10,6 @@ from AnonX.utils.database.memorydatabase import (
 # Commands
 ACTIVEVC_COMMAND = get_command("ACTIVEVC_COMMAND")
 ACTIVEVIDEO_COMMAND = get_command("ACTIVEVIDEO_COMMAND")
-FAST_AC = get_command("FAST_AC")
-CLR_LOG = get_command("CLR_LOG")
-
 
 
 @app.on_message(filters.command(ACTIVEVC_COMMAND) & SUDOERS)
@@ -74,4 +66,3 @@ async def activevi_(_, message: Message):
             f"**ʟɪsᴛ ᴏғ ᴄᴜʀʀᴇɴᴛʟʏ ᴀᴄᴛɪᴠᴇ ᴠɪᴅᴇᴏᴄʜᴀᴛs ᴏɴ ᴍᴜsɪᴄ ʙᴏᴛ :-**\n\n{text}",
             disable_web_page_preview=True,
         )
-
