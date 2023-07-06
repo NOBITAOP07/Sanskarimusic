@@ -7,12 +7,12 @@ from pyrogram.types import Message, InlineKeyboardMarkup
 from pyrogram.errors import UserDeactivated, PeerIdInvalid, UserNotParticipant, FloodWait
 
 from config import LOG_GROUP_ID, OWNER_ID, STRING1, STRING2, STRING3, STRING4, STRING5
-from prime import app, userbot
-from prime.misc import SUDOERS
-from prime.utils.database import get_served_chats
-from prime.utils.database.memorydatabase import (get_active_chats, get_active_video_chats)
+from AnonX import app, userbot
+from AnonX.misc import SUDOERS
+from AnonX.utils.database import get_served_chats
+from AnonX.utils.database.memorydatabase import (get_active_chats, get_active_video_chats)
 
-from prime.utils import bot_sys_stats
+from AnonX.utils import bot_sys_stats
 
 MAINGROUP_ID = LOG_GROUP_ID
 
