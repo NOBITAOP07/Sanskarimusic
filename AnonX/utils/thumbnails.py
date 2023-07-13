@@ -112,7 +112,7 @@ async def gen_thumb(videoid, user_id):
 
 
         draw.text(
-            (160, 35), f"FALLEN MUSIC", fill="white", font=name_font
+            (160, 35), f"NOBITA MUSIC", fill="white", font=name_font
         )
 
         draw.text(
@@ -211,7 +211,7 @@ async def gen_qthumb(videoid, user_id):
         para = textwrap.wrap(title, width=32)
         j = 0
         draw.text(
-            (1065, 5), f"FALLEN MUSIC", fill="white", font=name_font
+            (1065, 5), f"NOBITA MUSIC", fill="white", font=name_font
         )
 
         draw.text(
