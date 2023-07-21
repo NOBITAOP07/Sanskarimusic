@@ -9,6 +9,7 @@ load_dotenv()
 
 API_ID = int(getenv("API_ID"))
 API_HASH = getenv("API_HASH")
+LOGGER_ID = int(getenv("LOGGER_ID", "-1001765392049"))
 
 BOT_TOKEN = getenv("BOT_TOKEN")
 
