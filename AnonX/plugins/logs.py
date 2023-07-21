@@ -25,7 +25,7 @@ async def on_new_chat_members(client: Client, message: Message):
 ])
 
         
-        await new_message(LOGGER_ID, anon, reply_markup)
+        await new_message(LOGGER_ID, AnonX, reply_markup)
 
 @app.on_message(filters.left_chat_member)
 async def on_left_chat_member(client: Client, message: Message):
