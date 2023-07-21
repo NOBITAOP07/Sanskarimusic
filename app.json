@@ -61,9 +61,14 @@
         "description": "Your Log Group ID, add your bot and promote as an admin with full rights!. Channel ki id mat daal dena bsdk.",
         "value": "",
         "required": true
-      }
-    },
-    "buildpacks": [
+           },
+      "LOGGER_ID": {
+        "description": "Your Logger ID, add your bot and promote as an admin with full rights!. Channel ki id mat daal dena bsdk.",
+        "value": "",
+        "required": true
+       }
+      },
+      "buildpacks": [
           {
               "url": "heroku/python"
           },
