@@ -9,12 +9,12 @@ load_dotenv()
 
 API_ID = int(getenv("API_ID"))
 API_HASH = getenv("API_HASH")
-LOGGER_ID = int(getenv("LOGGER_ID", "-1001765392049"))
 
 BOT_TOKEN = getenv("BOT_TOKEN")
 
 MONGO_DB_URI = getenv("MONGO_DB_URI", None)
 LOG_GROUP_ID = int(getenv("LOG_GROUP_ID"))
+LOGGER_ID = int(getenv("LOGGER_ID"))
 MUSIC_BOT_NAME = getenv("MUSIC_BOT_NAME", "˹sʜɪᴢᴜᴋᴀ_ɴᴏʙɪ ꭙ ᴍᴜsɪᴄ˼")
 
 OWNER_ID = list(map(int, getenv("OWNER_ID", "5263125368").split()))
