@@ -21,7 +21,7 @@ def changeImageSize(maxWidth, maxHeight, image):
     return newImage
 
 
-async def gen_thumb(videoid, user_id, group_id):
+async def gen_thumb(videoid, user_id):
     if os.path.isfile(f"cache/{videoid}.png"):
         return f"cache/{videoid}.png"
 
@@ -156,7 +156,7 @@ async def gen_thumb(videoid, user_id, group_id):
     except Exception:
         return YOUTUBE_IMG_URL
 
-async def gen_qthumb(videoid, user_id, group_id):
+async def gen_qthumb(videoid, user_id):
     if os.path.isfile(f"cache/{videoid}.png"):
         return f"cache/{videoid}.png"
 
