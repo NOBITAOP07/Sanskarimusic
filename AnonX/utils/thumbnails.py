@@ -59,11 +59,13 @@ async def gen_thumb(videoid, user_id):
                     await f.close()
 
         try:
-            wxyz = await app.get_profile_photos(app.id)
-            wxy = await app.download_media(wxyz[0]['file_id'], file_name=f'{app.id}.jpg')
-        except:
+            wxyz = await app.get_profile_photos(user_id)
+            wxy = await app.download_media(wxyz[0]['file_id'], file_name=f'{user_id}.jpg')
+            wxy = await app.get_user_name(user_name)
+      except:
             hehe = await app.get_profile_photos(app.id)
-            wxy = await app.download_media(hehe[0]['file_id'], file_name=f'{app.id}.jpg')
+           wxy = await app.download_media(hehe[0]['file_id'], file_name=f'{app.id}.jpg')
+           wxy = await app.get_user_name(user_name)
         xy = Image.open(wxy)
         a = Image.new('L', [640, 640], 0)
         b = ImageDraw.Draw(a)
@@ -75,8 +77,9 @@ async def gen_thumb(videoid, user_id):
         x = f.resize((140, 140))
         
         try:
-            xyz = await app.get_profile_photos(user_id)
-            xy = await app.download_media(xyz[0]['file_id'], file_name=f'{user_id}.jpg')
+            xyz = await app.get_profile_photos(app.id)
+            xyz = await app.get_user_nam(user_name)
+            xy = await app.download_media(xyz[0]['file_id'], file_name=f'{app.id}.jpg')
         except:
             he = await app.get_profile_photos(app.id)
             xy = await app.download_media(he[0]['file_id'], file_name=f'{app.id}.jpg')
