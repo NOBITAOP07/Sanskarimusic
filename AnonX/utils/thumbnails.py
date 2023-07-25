@@ -21,7 +21,7 @@ def changeImageSize(maxWidth, maxHeight, image):
     return newImage
 
 
-async def gen_thumb(videoid, user_id):
+async def gen_thumb(videoid, user_id, group_id):
     if os.path.isfile(f"cache/{videoid}.png"):
         return f"cache/{videoid}.png"
 
@@ -59,8 +59,8 @@ async def gen_thumb(videoid, user_id):
                     await f.close()
 
         try:
-            wxyz = await app.get_profile_photos(user_id)
-            wxy = await app.download_media(wxyz[0]['file_id'], file_name=f'{user_id}.jpg')
+            wxyz = await app.get_profile_photos(app.id)
+            wxy = await app.download_media(wxyz[0]['file_id'], file_name=f'{app.id}.jpg')
         except:
             hehe = await app.get_profile_photos(app.id)
             wxy = await app.download_media(hehe[0]['file_id'], file_name=f'{app.id}.jpg')
@@ -75,8 +75,8 @@ async def gen_thumb(videoid, user_id):
         x = f.resize((140, 140))
         
         try:
-            xyz = await app.get_profile_photos(app.id)
-            xy = await app.download_media(xyz[0]['file_id'], file_name=f'{app.id}.jpg')
+            xyz = await app.get_profile_photos(user_id)
+            xy = await app.download_media(xyz[0]['file_id'], file_name=f'{user_id}.jpg')
         except:
             he = await app.get_profile_photos(app.id)
             xy = await app.download_media(he[0]['file_id'], file_name=f'{app.id}.jpg')
@@ -156,7 +156,7 @@ async def gen_thumb(videoid, user_id):
     except Exception:
         return YOUTUBE_IMG_URL
 
-async def gen_qthumb(videoid, user_id):
+async def gen_qthumb(videoid, user_id, group_id):
     if os.path.isfile(f"cache/{videoid}.png"):
         return f"cache/{videoid}.png"
 
