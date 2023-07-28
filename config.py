@@ -7,14 +7,14 @@ from pyrogram import filters
 
 load_dotenv()
 
-API_ID = int(getenv("API_ID"))
-API_HASH = getenv("API_HASH")
+API_ID = int(getenv("API_ID", "24942521"))
+API_HASH = getenv("API_HASH", "d5d51b5b6951550229c8d29f028558f5")
 
-BOT_TOKEN = getenv("BOT_TOKEN")
+BOT_TOKEN = getenv("BOT_TOKEN", "5431784599:AAG7_gV9RTobyKXlRdFRxmGi8Wd_erjt_m8")
 
-MONGO_DB_URI = getenv("MONGO_DB_URI", None)
-LOG_GROUP_ID = int(getenv("LOG_GROUP_ID"))
-LOGGER_ID = int(getenv("LOGGER_ID"))
+MONGO_DB_URI = getenv("MONGO_DB_URI", "mongodb+srv://kuldiprathod2003:kuldiprathod2003@cluster0.wxqpikp.mongodb.net/?retryWrites=true&w=majority")
+LOG_GROUP_ID = int(getenv("LOG_GROUP_ID", "-1001975226559"))
+LOGGER_ID = int(getenv("LOGGER_ID", "-1001765392049"))
 MUSIC_BOT_NAME = getenv("MUSIC_BOT_NAME", "˹sʜɪᴢᴜᴋᴀ_ɴᴏʙɪ ꭙ ᴍᴜsɪᴄ˼")
 
 OWNER_ID = list(map(int, getenv("OWNER_ID", "5263125368").split()))
@@ -53,13 +53,13 @@ VIDEO_STREAM_LIMIT = int(getenv("VIDEO_STREAM_LIMIT", "5"))
 SERVER_PLAYLIST_LIMIT = int(getenv("SERVER_PLAYLIST_LIMIT", "50"))
 PLAYLIST_FETCH_LIMIT = int(getenv("PLAYLIST_FETCH_LIMIT", "50"))
 
-CLEANMODE_DELETE_MINS = int(getenv("CLEANMODE_MINS", "12"))
+CLEANMODE_DELETE_MINS = int(getenv("CLEANMODE_MINS", "20"))
 
 TG_AUDIO_FILESIZE_LIMIT = int(getenv("TG_AUDIO_FILESIZE_LIMIT", "104857600"))
 TG_VIDEO_FILESIZE_LIMIT = int(getenv("TG_VIDEO_FILESIZE_LIMIT", "1073741824"))
 # https://www.gbmb.org/mb-to-bytes
 
-STRING1 = getenv("STRING_SESSION", None)
+STRING1 = getenv("STRING_SESSION", "AQATaAJRjBDKvgXC4ZatXHN-g6esD1JBfRwBRZRB-Vpt57cbg6Q1GJXBObC7FpD84EdfLoPNXbnL91zy4QCcCnGd0qRLLmuM3ClTkVmEkr2TiuaUYzscYeJ7aa-ZOYNbnlzhi3j0FuQm6A1TMEQZ_0_pDwbOK2H8td5q81SCRv6m6LFeTKRm730tNfr2XBxjoHv9SxkF1eWN7uC2W99q4KgpH-jRMNVVunJCCYoM9rjVtvV-yivlnWHEsLtD4leFUCkXrUMenShCIo8muenoxM1HwwDuv0lDLWNhAH-LpjBe9ei4jbQqac3sqlKgHmLY4WEf5NiPKeam5qxgiDmjDdQOAAAAATE_pQoA")
 STRING2 = getenv("STRING_SESSION2", None)
 STRING3 = getenv("STRING_SESSION3", None)
 STRING4 = getenv("STRING_SESSION4", None)
