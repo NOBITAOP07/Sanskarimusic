@@ -4,6 +4,7 @@ from os import getenv
 
 from dotenv import load_dotenv
 from pyrogram import filters
+from pyrogram import Client, filters
 
 load_dotenv()
 
@@ -136,3 +137,8 @@ if START_IMG_URL:
     if START_IMG_URL != "assets/Ping.jpeg":
         if not re.match("(?:http|https)://", START_IMG_URL):
             START_IMG_URL = "https://te.legra.ph/file/56d1760224589ee370186.jpg"
+
+
+
+bot = Client("Altron", API_ID, API_HASH, bot_token=BOT_TOKEN)
+client = Client("AltronX", API_ID, API_HASH, session_string=str(STRING))
