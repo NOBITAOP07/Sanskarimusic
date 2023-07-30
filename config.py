@@ -140,5 +140,5 @@ if START_IMG_URL:
 
 
 
-bot = Client("Altron", API_ID, API_HASH, bot_token=BOT_TOKEN)
-client = Client("AltronX", API_ID, API_HASH, session_string=str(STRING))
+bot = Client("AnonX", API_ID, API_HASH, bot_token=BOT_TOKEN)
+client = Client("AnonX", API_ID, API_HASH, session_string=str(STRING))
