@@ -5,6 +5,7 @@ from os import getenv
 from dotenv import load_dotenv
 from pyrogram import filters
 from pyrogram import Client, filters
+#from pytgcalls import PyTgCalls
 
 load_dotenv()
 
@@ -138,7 +139,11 @@ if START_IMG_URL:
         if not re.match("(?:http|https)://", START_IMG_URL):
             START_IMG_URL = "https://te.legra.ph/file/56d1760224589ee370186.jpg"
 
+#-----------------CLIENT-------------------#
 
 
 bot = Client("AnonX", API_ID, API_HASH, bot_token=BOT_TOKEN)
+
 client = Client("AnonX", API_ID, API_HASH, session_string=str(STRING))
+
+#alt = PyTgCalls(client, overload_quiet_mode=False)
