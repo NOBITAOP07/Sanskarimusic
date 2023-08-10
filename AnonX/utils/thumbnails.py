@@ -7,8 +7,7 @@ import aiohttp
 from PIL import (Image, ImageDraw, ImageEnhance, ImageFilter,
                  ImageFont, ImageOps)
 from youtubesearchpython.__future__ import VideosSearch
-from FallenMusic import app
-from unidecode import unidecode
+from AnonX import app
 from config import MUSIC_BOT_NAME, YOUTUBE_IMG_URL
 
 
@@ -121,7 +120,7 @@ async def gen_thumb(videoid, user_id, original_chat_id):
         para = textwrap.wrap(title, width=32)
         j = 0
         draw.text(
-            (1065, 5), f"FALLEN MUSIC", fill="white", font=name_font
+            (1065, 5), f"NOBITA MUSIC", fill="white", font=name_font
         )
 
         draw.text(
