@@ -6,7 +6,7 @@ from pyrogram import filters
 from pyrogram.types import Message, InlineKeyboardMarkup
 from pyrogram.errors import UserDeactivated, PeerIdInvalid, UserNotParticipant, FloodWait
 
-from config import LOG_GROUP_ID, OWNER_ID, STRING1, STRING2, STRING3, STRING4, STRING5
+from config import LOG_GROUP_ID, OWNER_ID, STRING1, STRING2, STRING3, STRING4, STRING5, LOG_FILE_NAME
 from AnonX import app, userbot
 from AnonX.misc import SUDOERS
 from AnonX.utils.database import get_served_chats
@@ -77,15 +77,10 @@ async def littleac(_, message: Message):
 #Logs, Temps Etc Cleaner Without Restarting Bot
 @app.on_message(filters.command("clr") & SUDOERS)
 async def clearLogs(_, message: Message):
-    A = 'rm -rf downloads'
-    B = 'rm -rf cache'
+    logsname = LOG_FILE_NAME[3]
     try:
-        os.system(A)
-        os.system(B)
-        os.system('rm logs.txt')
-        for i in range(11):
-            number = str(i)
-            os.system(f'rm logs.txt.{number}')
+	    os.system('rm -rf downloads/* cache/*')
+	    os.system(f"rm -rf {logsname}*")
     except:
         await message.reply_text(f"**Failed To Delete Some Files !!**\nPlease Read\n{traceback.format_exc()}", quote=True)
     await message.reply_text(f"**Successfully Deleted Below Folders & Files**:\n -Downloads\n -Cache\n -Logs\n\n **PLUGIN MADE BY** - Ayush", quote=True)
