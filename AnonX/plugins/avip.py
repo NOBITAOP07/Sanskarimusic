@@ -77,7 +77,7 @@ async def littleac(_, message: Message):
 #Logs, Temps Etc Cleaner Without Restarting Bot
 @app.on_message(filters.command("clr") & SUDOERS)
 async def clearLogs(_, message: Message):
-    logsname = LOG_FILE_NAME[3]
+    logsname = LOG_FILE_NAME[:5]
     try:
 	    os.system('rm -rf downloads/* cache/*')
 	    os.system(f"rm -rf {logsname}*")
