@@ -11,14 +11,14 @@ load_dotenv()
 API_ID = int(getenv("API_ID", "28187374"))
 API_HASH = getenv("API_HASH", "059b0d6951743d4f1f58606f5be4f5e6")
 
-BOT_TOKEN = getenv("BOT_TOKEN", "5431784599:AAG7_gV9RTobyKXlRdFRxmGi8Wd_erjt_m8")
+BOT_TOKEN = getenv("BOT_TOKEN", "6551493712:AAFJ_ud8JWx-J8ZEmpEFcoL6zFSwG3Zh4pQ")
 
-MONGO_DB_URI = getenv("MONGO_DB_URI", "mongodb+srv://kuldiprathod2003:kuldiprathod2003@cluster0.wxqpikp.mongodb.net/?retryWrites=true&w=majority")
-LOG_GROUP_ID = int(getenv("LOG_GROUP_ID", ""))
+MONGO_DB_URI = getenv("MONGO_DB_URI", "mongodb+srv://KuldipBot:KuldipBot@cluster0.oe0dipi.mongodb.net/?retryWrites=true&w=majority")
+LOG_GROUP_ID = int(getenv("LOG_GROUP_ID", "-1001930443430"))
 LOGGER_ID = int(getenv("LOGGER_ID", "-1001765392049"))
-MUSIC_BOT_NAME = getenv("MUSIC_BOT_NAME", "˹sʜɪᴢᴜᴋᴀ_ɴᴏʙɪ ꭙ ᴍᴜsɪᴄ˼")
+MUSIC_BOT_NAME = getenv("MUSIC_BOT_NAME", "◄⏤͟͟͞ ⃪ͥ͢ ᷟ❥ ̶͢ ̶𝐍𝐎𝐁𝐈𝐓𝐀_𝐌𝐔𝐒𝐈𝐂")
 
-OWNER_ID = list(map(int, getenv("OWNER_ID", "5263125368").split()))
+OWNER_ID = list(map(int, getenv("OWNER_ID", "6053921725").split()))
 
 HEROKU_API_KEY = getenv("HEROKU_API_KEY", None)
 HEROKU_APP_NAME = getenv("HEROKU_APP_NAME", None)
